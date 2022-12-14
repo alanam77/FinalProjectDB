@@ -13,6 +13,10 @@ args = parser.parse_args()
 str = args.record
 arr = str.split(',')
 
+for x in range(len(arr)):
+    arr[x] = arr[x].replace("_"," ")
+
+
 if args.table == 'Musicians':
     if args.add:
         cur.execute('''INSERT INTO Musicians VALUES(?,?,?,?,?)''',(arr[0],arr[1],arr[2],arr[3],arr[4]))
