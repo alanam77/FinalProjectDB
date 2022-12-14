@@ -1,6 +1,6 @@
 import sqlite3
 import csv
-con = sqlite3.connect('FinalProject.db')
+con = sqlite3.connect('NotownRecords.db')
 cur = con.cursor()
 statement = '''
 CREATE TABLE Musicians(num INTEGER NOT NULL, street CHAR(20) NOT NULL, str_type CHAR(10) NOT NULL, name CHAR(20) NOT NULL, ssn INTEGER NOT NULL, PRIMARY KEY (ssn));
