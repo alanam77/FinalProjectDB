@@ -69,7 +69,7 @@ print('--------------------')
 for row in res : print(row)
 print("\n")
 print("4. Names of Musicians and Number of Albums written by them\n")
-statement = '''SELECT Musicians.name, COUNT(Performs.album_id) FROM Musicians NATURAL JOIN Performs GROUP BY Musicians.name'''
+statement = '''SELECT Musicians.name, COUNT(Performs.album_id) AS Written_Albums FROM Musicians NATURAL JOIN Performs GROUP BY Musicians.name'''
 res = cur.execute(statement)
 
 print('--------------------')
